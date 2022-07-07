@@ -5,7 +5,7 @@ function App() {
   const [data, setData] = useState([
     {
       id: 1,
-      name: "Beşiktaş",
+      name: "TEAM A",
       rate: 35,
       count: 200,
       color:
@@ -13,14 +13,14 @@ function App() {
     },
     {
       id: 2,
-      name: "Fenerbahçe",
+      name: "TEAM B",
       rate: 30,
       count: 170,
       color: "yellow",
     },
     {
       id: 3,
-      name: "Galatasaray",
+      name: "TEAM C",
       rate: 25,
       count: 100,
       color:
@@ -28,13 +28,13 @@ function App() {
     },
     {
       id: 4,
-      name: "Trabzonspor",
+      name: "TEAM D",
       rate: 10,
       count: 75,
       color: "pink",
     },
   ]);
-  const oyVer = (index) => {
+  const vote = (index) => {
     let x = data[index].count;
     setData(x);
   };
@@ -57,8 +57,8 @@ function App() {
             }}
           >
             {item.name}
-            <p>Oy: {item.count}</p>
-            <button onClick={() => oyVer(index)}>+</button>
+            <p>Rate: {item.count}</p>
+            <button onClick={() => vote(index)}>+</button>
           </div>
         );
       })}
