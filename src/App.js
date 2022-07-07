@@ -29,7 +29,7 @@ function App() {
     {
       id: 4,
       name: "TEAM D",
-      rate: 10,
+      rate: 20,
       count: 75,
       color: "linear-gradient(90deg,rgba(62,143,217,0.9808298319327731) 18%,rgba(170,16,230,1) 100%, rgba(255,255,255,1) 100%)",
     },
