@@ -35,8 +35,18 @@ function App() {
     },
   ]);
   const vote = (index) => {
-    let x = data[index].count;
-    setData(x);
+    const copyArr = [...data];
+    copyArr[index].rate += 10;
+    setData(copyArr);
+  };
+
+  const reset = () => {
+    const copyArr = [...data];
+    copyArr[0].rate = 20;
+    copyArr[1].rate = 20;
+    copyArr[2].rate = 20;
+    copyArr[3].rate = 20;
+    setData(copyArr);
   };
   return (
     <div className="App">
@@ -45,24 +55,29 @@ function App() {
           <div
             key={index}
             style={{
+
+             marginBottom:"10px",
               padding: "10px",
               display: "flex",
               flexDirection: "column",
               textAlign: "center",
               alignItems: "center",
               justifyContent: "center",
-
+              borderRadius: "20px",
               width: item.rate + "%",
               background: item.color,
             }}
           >
             {item.name}
-            <p>Rate: {item.count}</p>
+            <p>Rate: {item.rate}</p>
             <button onClick={() => vote(index)}>+</button>
           </div>
         );
       })}
-      Dinamik Inline-CSS
+      <hr />
+      <button onClick={reset}>Reset</button>
+      <br />
+      <h1> Dynamic Inline CSS</h1>
     </div>
   );
 }
