@@ -16,7 +16,7 @@ function App() {
       name: "TEAM B",
       rate: 30,
       count: 170,
-      color: "yellow",
+      color: "linear-gradient(90deg,rgba(216,217,62,0.9808298319327731) 18%,rgba(18,51,209,1) 100%, rgba(255,255,255,1) 100%)",
     },
     {
       id: 3,
@@ -24,14 +24,14 @@ function App() {
       rate: 25,
       count: 100,
       color:
-        "linear-gradient(90deg,rgba(217,62,62,0.980) 18%,rgba(211,230,16,1) 100%, rgba(255,255,255,1) 100%)",
+        "linear-gradient(90deg,rgba(217,62,62,0.9808298319327731) 18%,rgba(211,230,16,1) 100%, rgba(255,255,255,1) 100%)",
     },
     {
       id: 4,
       name: "TEAM D",
       rate: 10,
       count: 75,
-      color: "pink",
+      color: "linear-gradient(90deg,rgba(62,143,217,0.9808298319327731) 18%,rgba(170,16,230,1) 100%, rgba(255,255,255,1) 100%)",
     },
   ]);
   const vote = (index) => {
@@ -55,7 +55,8 @@ function App() {
           <div
             key={index}
             style={{
-
+              color: "white",
+              fontWeight:"bold",
              marginBottom:"10px",
               padding: "10px",
               display: "flex",
@@ -75,7 +76,7 @@ function App() {
         );
       })}
       <hr />
-      <button onClick={reset}>Reset</button>
+      <button className="button" onClick={reset}>Reset</button>
       <br />
       <h1> Dynamic Inline CSS</h1>
     </div>
